@@ -135,7 +135,7 @@ export default function RootLayout({
           </nav>
         </header>
         <main className="bg-cream-white text-slate-gray p-4">
-          <div className="flex flex-row">
+          <div className="flex flex-row place-self-center sm:w-70/100">
             <div className="mr-4 hidden lg:block">
               <div className="flex flex-col">
                 <div

@@ -78,7 +78,7 @@ export default async function VideoPage({ params }: Params) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="flex flex-row">
+      <div className="flex flex-row place-self-center">
         <div className="mr-4 hidden flex-shrink-0 flex-row xl:block">
           {/* <iframe
             id="video-ad-9"
@@ -144,8 +144,11 @@ export default async function VideoPage({ params }: Params) {
             className="eas6a97888e37"
             rePlayInMS={60000}
           /> */}
-          <div className="pl-50">
+          <div
+          // className="pt-4 pb-4 sm:pr-50 lg:pr-0 lg:pl-50"
+          >
             <div
+              className="pb-4"
               id="video-ad-1"
               style={{
                 width: "100%",
