@@ -3,7 +3,7 @@ import { getAllVideoIds } from "../../lib/db";
 import { VideoPlayer } from "../../components/VideoPlayer";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { JSAdd } from "../../components/JSAdd";
+// import { JSAdd } from "../../components/JSAdd";
 
 type Params = { params: Promise<{ id: string }> };
 
@@ -80,7 +80,7 @@ export default async function VideoPage({ params }: Params) {
       />
       <div className="flex flex-row">
         <div className="mr-4 hidden flex-shrink-0 flex-row xl:block">
-          <iframe
+          {/* <iframe
             id="video-ad-9"
             src="//a.magsrv.com/iframe.php?idzone=5683802&size=160x600"
             width="160"
@@ -99,7 +99,7 @@ export default async function VideoPage({ params }: Params) {
             marginWidth={0}
             marginHeight={0}
             frameBorder={0}
-          ></iframe>
+          ></iframe> */}
         </div>
         <div className="flex flex-col">
           <div>
@@ -139,14 +139,79 @@ export default async function VideoPage({ params }: Params) {
             </p>
           </div>
 
-          <JSAdd
+          {/* <JSAdd
             zoneId="5684468"
             className="eas6a97888e37"
             rePlayInMS={60000}
-          />
+          /> */}
+          <div
+            id="video-ad-1"
+            style={{
+              width: "100%",
+              margin: "auto",
+              background: "rgba(0, 0, 0, 0.50)",
+              position: "relative",
+            }}
+          >
+            <div
+              id="frame"
+              style={{
+                width: "100%",
+                margin: "auto",
+                background: "rgba(0, 0, 0, 0.50)",
+                position: "relative",
+                zIndex: 99998,
+              }}
+            >
+              <iframe
+                data-aa="2405774"
+                src="//acceptable.a-ads.com/2405774/?size=Adaptive"
+                style={{
+                  border: "0",
+                  padding: "0",
+                  width: "70%",
+                  height: "auto",
+                  overflow: "hidden",
+                }}
+              ></iframe>
+            </div>
+          </div>
+          <div
+            id="video-ad-2"
+            style={{
+              width: "100%",
+              margin: "auto",
+              background: "rgba(0, 0, 0, 0.50)",
+              position: "relative",
+            }}
+          >
+            <div
+              id="frame"
+              style={{
+                width: "100%",
+                margin: "auto",
+                background: "rgba(0, 0, 0, 0.50)",
+                position: "relative",
+                zIndex: 99998,
+              }}
+            >
+              <iframe
+                data-aa="2405775"
+                src="//acceptable.a-ads.com/2405775/?size=Adaptive"
+                style={{
+                  border: "0",
+                  padding: "0",
+                  width: "70%",
+                  height: "auto",
+                  overflow: "hidden",
+                }}
+              ></iframe>
+            </div>
+          </div>
+
           <div className="mt-4 flex flex-row">
             <div className="flex-col">
-              <iframe
+              {/* <iframe
                 id="video-ad-1"
                 src="//a.magsrv.com/iframe.php?idzone=5683812&size=300x250"
                 width="300"
@@ -175,10 +240,10 @@ export default async function VideoPage({ params }: Params) {
                 marginWidth={0}
                 marginHeight={0}
                 frameBorder={0}
-              ></iframe>
+              ></iframe> */}
             </div>
             <div className="hidden flex-col md:block">
-              <iframe
+              {/* <iframe
                 id="video-ad-4"
                 src="//a.magsrv.com/iframe.php?idzone=5684638&size=300x250"
                 width="300"
@@ -207,12 +272,12 @@ export default async function VideoPage({ params }: Params) {
                 marginWidth={0}
                 marginHeight={0}
                 frameBorder={0}
-              ></iframe>
+              ></iframe> */}
             </div>
           </div>
         </div>
         <div className="ml-4 hidden flex-shrink-0 flex-row lg:block">
-          <iframe
+          {/* <iframe
             id="video-ad-7"
             src="//a.magsrv.com/iframe.php?idzone=5683804&size=160x600"
             width="160"
@@ -231,7 +296,7 @@ export default async function VideoPage({ params }: Params) {
             marginWidth={0}
             marginHeight={0}
             frameBorder={0}
-          ></iframe>
+          ></iframe> */}
         </div>
       </div>
     </>
