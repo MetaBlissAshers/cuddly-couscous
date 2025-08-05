@@ -138,7 +138,7 @@ export default function RootLayout({
           <div className="flex flex-row">
             <div className="mr-4 hidden lg:block">
               <div className="flex flex-col">
-                <iframe
+                {/* <iframe
                   id="vertical-ad-1"
                   src="//a.magsrv.com/iframe.php?idzone=5683712&size=160x600"
                   width={160}
@@ -157,13 +157,13 @@ export default function RootLayout({
                   marginWidth={0}
                   marginHeight={0}
                   frameBorder={0}
-                ></iframe>
+                ></iframe> */}
               </div>
             </div>
             <div className="">{children}</div>
             <div className="ml-4 hidden sm:block">
               <div className="flex flex-col">
-                <iframe
+                {/* <iframe
                   id="vertical-ad-3"
                   src="//a.magsrv.com/iframe.php?idzone=5683716&size=160x600"
                   width={160}
@@ -182,13 +182,13 @@ export default function RootLayout({
                   marginWidth={0}
                   marginHeight={0}
                   frameBorder={0}
-                ></iframe>
+                ></iframe> */}
               </div>
             </div>
           </div>
         </main>
         <footer className="bg-midnight-blue text-cream-white p-4 text-center">
-          <iframe
+          {/* <iframe
             className="hidden justify-self-center lg:block"
             src={"//a.magsrv.com/iframe.php?idzone=5682442&amp;size=900x250"}
             width={900}
@@ -219,9 +219,42 @@ export default function RootLayout({
             marginWidth={0}
             marginHeight={0}
             frameBorder="0"
-          ></iframe>
+          ></iframe> */}
+          <div
+            id="horizontal-ad-2"
+            style={{
+              width: "100%",
+              margin: "auto",
+              background: "rgba(0, 0, 0, 0.50)",
+              position: "relative",
+              // zIndex: 99998,
+            }}
+          >
+            <div
+              id="frame"
+              style={{
+                width: "100%",
+                margin: "auto",
+                background: "rgba(0, 0, 0, 0.50)",
+                position: "relative",
+                zIndex: 99998,
+              }}
+            >
+              <iframe
+                data-aa="2405770"
+                src="//acceptable.a-ads.com/2405770/?size=Adaptive"
+                style={{
+                  border: "0",
+                  padding: "0",
+                  width: "70%",
+                  height: "auto",
+                  overflow: "hidden",
+                }}
+              ></iframe>
+            </div>
+          </div>
           © 2023 Free HQ Porn XXX
-          <LocationLessAds />
+          {/* <LocationLessAds /> */}
         </footer>
       </body>
     </html>
