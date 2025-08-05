@@ -54,7 +54,7 @@ export default function RootLayout({
             <div
               id="horizontal-ad-3"
               style={{
-                width: "100%",
+                width: "65%",
                 margin: "auto",
                 background: "rgba(0, 0, 0, 0.50)",
                 position: "relative",
@@ -393,7 +393,7 @@ export default function RootLayout({
           <div
             id="horizontal-ad-2"
             style={{
-              width: "100%",
+              width: "65%",
               margin: "auto",
               background: "rgba(0, 0, 0, 0.50)",
               position: "relative",

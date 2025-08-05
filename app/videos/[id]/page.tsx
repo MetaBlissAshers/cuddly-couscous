@@ -144,68 +144,70 @@ export default async function VideoPage({ params }: Params) {
             className="eas6a97888e37"
             rePlayInMS={60000}
           /> */}
-          <div
-            id="video-ad-1"
-            style={{
-              width: "100%",
-              margin: "auto",
-              background: "rgba(0, 0, 0, 0.50)",
-              position: "relative",
-            }}
-          >
+          <div className="pl-50">
             <div
-              id="frame"
+              id="video-ad-1"
               style={{
                 width: "100%",
                 margin: "auto",
                 background: "rgba(0, 0, 0, 0.50)",
                 position: "relative",
-                zIndex: 99998,
               }}
             >
-              <iframe
-                data-aa="2405774"
-                src="//acceptable.a-ads.com/2405774/?size=Adaptive"
+              <div
+                id="frame"
                 style={{
-                  border: "0",
-                  padding: "0",
-                  width: "70%",
-                  height: "auto",
-                  overflow: "hidden",
+                  width: "100%",
+                  margin: "auto",
+                  background: "rgba(0, 0, 0, 0.50)",
+                  position: "relative",
+                  zIndex: 99998,
                 }}
-              ></iframe>
+              >
+                <iframe
+                  data-aa="2405774"
+                  src="//acceptable.a-ads.com/2405774/?size=Adaptive"
+                  style={{
+                    border: "0",
+                    padding: "0",
+                    width: "70%",
+                    height: "auto",
+                    overflow: "hidden",
+                  }}
+                ></iframe>
+              </div>
             </div>
-          </div>
-          <div
-            id="video-ad-2"
-            style={{
-              width: "100%",
-              margin: "auto",
-              background: "rgba(0, 0, 0, 0.50)",
-              position: "relative",
-            }}
-          >
             <div
-              id="frame"
+              id="video-ad-2"
               style={{
                 width: "100%",
                 margin: "auto",
                 background: "rgba(0, 0, 0, 0.50)",
                 position: "relative",
-                zIndex: 99998,
               }}
             >
-              <iframe
-                data-aa="2405775"
-                src="//acceptable.a-ads.com/2405775/?size=Adaptive"
+              <div
+                id="frame"
                 style={{
-                  border: "0",
-                  padding: "0",
-                  width: "70%",
-                  height: "auto",
-                  overflow: "hidden",
+                  width: "100%",
+                  margin: "auto",
+                  background: "rgba(0, 0, 0, 0.50)",
+                  position: "relative",
+                  zIndex: 99998,
                 }}
-              ></iframe>
+              >
+                <iframe
+                  data-aa="2405775"
+                  src="//acceptable.a-ads.com/2405775/?size=Adaptive"
+                  style={{
+                    border: "0",
+                    padding: "0",
+                    width: "70%",
+                    height: "auto",
+                    overflow: "hidden",
+                  }}
+                ></iframe>
+              </div>
             </div>
           </div>
 
