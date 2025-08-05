@@ -51,7 +51,40 @@ export default function RootLayout({
             <Link href="/">
               <h1 className="text-2xl font-bold">Free HQ Porn XXX</h1>
             </Link>
-            <iframe
+            <div
+              id="horizontal-ad-3"
+              style={{
+                width: "100%",
+                margin: "auto",
+                background: "rgba(0, 0, 0, 0.50)",
+                position: "relative",
+                // zIndex: 99998,
+              }}
+            >
+              <div
+                id="frame"
+                style={{
+                  width: "100%",
+                  margin: "auto",
+                  background: "rgba(0, 0, 0, 0.50)",
+                  position: "relative",
+                  zIndex: 99998,
+                }}
+              >
+                <iframe
+                  data-aa="2405767"
+                  src="//acceptable.a-ads.com/2405767/?size=Adaptive"
+                  style={{
+                    border: "0",
+                    padding: "0",
+                    width: "70%",
+                    height: "auto",
+                    overflow: "hidden",
+                  }}
+                ></iframe>
+              </div>
+            </div>
+            {/* <iframe
               id="horizontal-ad-3"
               className="mt-4 mb-4 hidden justify-self-center sm:block"
               src="//a.magsrv.com/iframe.php?idzone=5683714&size=728x90"
@@ -72,7 +105,7 @@ export default function RootLayout({
               marginWidth={0}
               marginHeight={0}
               frameBorder={0}
-            ></iframe>
+            ></iframe> */}
             <ul className="mt-0 flex flex-row space-y-0 space-x-10 text-lg font-bold">
               <li>
                 <Link
