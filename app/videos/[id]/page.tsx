@@ -4,6 +4,8 @@ import { VideoPlayer } from "../../components/VideoPlayer";
 import type { Metadata } from "next";
 import Link from "next/link";
 // import { JSAdd } from "../../components/JSAdd";
+// import { JucicyAds2 } from "../../components/JucicyAds2";
+import { JucicyAds } from "@/app/components/JucicyAds";
 
 type Params = { params: Promise<{ id: string }> };
 
@@ -144,7 +146,7 @@ export default async function VideoPage({ params }: Params) {
             className="eas6a97888e37"
             rePlayInMS={60000}
           /> */}
-          <div
+          {/* <div
           // className="pt-4 pb-4 sm:pr-50 lg:pr-0 lg:pl-50"
           >
             <div
@@ -212,10 +214,14 @@ export default async function VideoPage({ params }: Params) {
                 ></iframe>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="mt-4 flex flex-row">
             <div className="flex-col">
+              <div id="video-ad-1"></div>
+              <div id="video-ad-2"></div>
+              <div id="video-ad-3"></div>
+
               {/* <iframe
                 id="video-ad-1"
                 src="//a.magsrv.com/iframe.php?idzone=5683812&size=300x250"
@@ -248,6 +254,9 @@ export default async function VideoPage({ params }: Params) {
               ></iframe> */}
             </div>
             <div className="hidden flex-col md:block">
+              <div id="video-ad-4"></div>
+              <div id="video-ad-5"></div>
+              <div id="video-ad-6"></div>
               {/* <iframe
                 id="video-ad-4"
                 src="//a.magsrv.com/iframe.php?idzone=5684638&size=300x250"
@@ -303,6 +312,49 @@ export default async function VideoPage({ params }: Params) {
             frameBorder={0}
           ></iframe> */}
         </div>
+        <JucicyAds
+          divId="video-ad-1"
+          width="300"
+          height="250"
+          zoneId="1098214"
+        />
+        <JucicyAds
+          divId="video-ad-2"
+          width="300"
+          height="250"
+          zoneId="1098215"
+        />
+        <JucicyAds
+          divId="video-ad-3"
+          width="300"
+          height="250"
+          zoneId="1098216"
+        />
+        <JucicyAds
+          divId="video-ad-4"
+          width="300"
+          height="250"
+          zoneId="1098217"
+        />
+        <JucicyAds
+          divId="video-ad-5"
+          width="300"
+          height="250"
+          zoneId="1098218"
+        />
+        <JucicyAds
+          divId="video-ad-6"
+          width="300"
+          height="250"
+          zoneId="1098219"
+        />
+        {/* <script type="text/javascript">juicy_adzone = '1098207';</script>
+        <script
+          type="text/javascript"
+          src="https://poweredby.jads.co/js/jfc.js"
+          charSet="utf-8"
+        ></script> */}
+        {/* <JucicyAds2 zoneId="1098206" divId="video-ad-0" /> */}
       </div>
     </>
   );

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Video } from "../lib/db";
 import { VideoCard } from "./VideoCard";
-import { JSAdd } from "./JSAdd";
+// import { JSAdd } from "./JSAdd";
 
 export function PaginatedVideoList({
   allVideos,
@@ -117,13 +117,13 @@ export function PaginatedVideoList({
               video={video}
               testId={`video-card-${index}`}
             />
-            {index % 7 === 0 && index !== 0 && (
-              <JSAdd
-                zoneId="5684612"
-                className="eas6a97888e37"
-                rePlayInMS={1000}
-              />
-            )}
+            {/* {index % 7 === 0 && index !== 0 && (
+              // <JSAdd
+              //   zoneId="5684612"
+              //   className="eas6a97888e37"
+              //   rePlayInMS={1000}
+              // />
+            )} */}
           </div>
         ))}
       </div>

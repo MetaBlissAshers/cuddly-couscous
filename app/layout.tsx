@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { JucicyAds } from "./components/JucicyAds";
 // import { LocationLessAds } from "./components/LocationLessAds";
 // import AgeVerification from "./components/AgeVerification";
 
@@ -88,6 +89,7 @@ export default function RootLayout({
                 ></iframe>
               </div>
             </div>
+            <div id="horizontal-ad-2"></div>
             {/* <iframe
               id="horizontal-ad-3"
               className="mt-4 mb-4 hidden justify-self-center sm:block"
@@ -139,10 +141,13 @@ export default function RootLayout({
           </nav>
         </header>
         <main className="bg-cream-white text-slate-gray p-4">
-          <div className="flex flex-row place-self-center sm:w-70/100">
+          <div className="flex flex-row place-self-center">
+            {/* sm:w-70/100 */}
             <div className="mr-4 hidden lg:block">
               <div className="flex flex-col">
-                <div
+                <div id="vertical-ad-1"></div>
+                <div id="vertical-ad-2"></div>
+                {/* <div
                   id="vertical-ad-2"
                   style={{ position: "absolute", zIndex: 99999 }}
                 >
@@ -226,7 +231,7 @@ export default function RootLayout({
                     }
                   `}</style>
                   </div>
-                </div>
+                </div> */}
                 {/* <iframe
                   id="vertical-ad-1"
                   src="//a.magsrv.com/iframe.php?idzone=5683712&size=160x600"
@@ -252,7 +257,9 @@ export default function RootLayout({
             <div className="">{children}</div>
             <div className="ml-4 hidden sm:block">
               <div className="flex flex-col">
-                <div
+                <div id="vertical-ad-3"></div>
+                <div id="vertical-ad-4"></div>
+                {/* <div
                   id="vertical-ad-1"
                   style={{ position: "absolute", zIndex: 99999 }}
                 >
@@ -336,7 +343,7 @@ export default function RootLayout({
                       }
                     `}</style>
                   </div>
-                </div>
+                </div> */}
                 {/* <iframe
                   id="vertical-ad-3"
                   src="//a.magsrv.com/iframe.php?idzone=5683716&size=160x600"
@@ -394,7 +401,7 @@ export default function RootLayout({
             marginHeight={0}
             frameBorder="0"
           ></iframe> */}
-          <div
+          {/* <div
             id="horizontal-ad-2"
             style={{
               width: "65%",
@@ -426,9 +433,50 @@ export default function RootLayout({
                 }}
               ></iframe>
             </div>
-          </div>
-          © 2023 Free HQ Porn XXX
+          </div> */}
+          <div className="justify-self-center" id="horizontal-ad-1"></div>©
+          2023 Free HQ Porn XXX
           {/* <LocationLessAds /> */}
+          <JucicyAds
+            divId="horizontal-ad-2"
+            width="728"
+            height="90"
+            zoneId="1098203"
+          />
+          <JucicyAds
+            divId="horizontal-ad-1"
+            width="908"
+            height="258"
+            zoneId="1098209"
+          />
+          <JucicyAds
+            divId="vertical-ad-1"
+            width="160"
+            height="600"
+            zoneId="1098210"
+          />
+          <JucicyAds
+            divId="vertical-ad-2"
+            width="160"
+            height="600"
+            zoneId="1098211"
+          />
+          <JucicyAds
+            divId="vertical-ad-3"
+            width="160"
+            height="600"
+            zoneId="1098212"
+          />
+          <JucicyAds
+            divId="vertical-ad-4"
+            width="160"
+            height="600"
+            zoneId="1098213"
+          />
+          {/* <script
+            type="text/javascript"
+            src="https://js.juicyads.com/jp.php?c=4464w203s224u4r2o2f4z2b424&u=https%3A%2F%2Fwww.juicyads.rocks"
+          ></script> */}
         </footer>
       </body>
     </html>
