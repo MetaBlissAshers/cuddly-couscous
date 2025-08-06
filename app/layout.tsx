@@ -41,6 +41,10 @@ export default function RootLayout({
   gtag('config', 'G-E083W140K0');
 `}
         </script>
+        <meta
+          name="juicyads-site-verification"
+          content="d043e35c2f2e6956e39aa768836171c5"
+        ></meta>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
