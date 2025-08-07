@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { JucicyAds } from "./components/JucicyAds";
+import { AdsteraAd } from "./components/AdsteraAd";
 // import { LocationLessAds } from "./components/LocationLessAds";
 // import AgeVerification from "./components/AgeVerification";
 
@@ -90,6 +91,7 @@ export default function RootLayout({
               </div>
             </div>
             <div id="horizontal-ad-2"></div>
+            <div id="horizontal-ad-4"></div>
             {/* <iframe
               id="horizontal-ad-3"
               className="mt-4 mb-4 hidden justify-self-center sm:block"
@@ -472,6 +474,12 @@ export default function RootLayout({
             width="160"
             height="600"
             zoneId="1098213"
+          />
+          <AdsteraAd
+            divId="horizontal-ad-4"
+            width="728"
+            height="90"
+            zoneId="7563824927835ebe1983954665c6829d"
           />
           {/* <script
             type="text/javascript"
