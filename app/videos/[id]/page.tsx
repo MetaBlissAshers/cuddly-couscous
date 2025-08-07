@@ -6,6 +6,7 @@ import Link from "next/link";
 // import { JSAdd } from "../../components/JSAdd";
 // import { JucicyAds2 } from "../../components/JucicyAds2";
 import { JucicyAds } from "@/app/components/JucicyAds";
+import { AdsteraAd } from "@/app/components/AdsteraAd";
 
 type Params = { params: Promise<{ id: string }> };
 
@@ -221,6 +222,7 @@ export default async function VideoPage({ params }: Params) {
               <div id="video-ad-1"></div>
               <div id="video-ad-2"></div>
               <div id="video-ad-3"></div>
+              <div id="video-ad-7"></div>
 
               {/* <iframe
                 id="video-ad-1"
@@ -257,6 +259,8 @@ export default async function VideoPage({ params }: Params) {
               <div id="video-ad-4"></div>
               <div id="video-ad-5"></div>
               <div id="video-ad-6"></div>
+              <div id="video-ad-8"></div>
+
               {/* <iframe
                 id="video-ad-4"
                 src="//a.magsrv.com/iframe.php?idzone=5684638&size=300x250"
@@ -347,6 +351,18 @@ export default async function VideoPage({ params }: Params) {
           width="300"
           height="250"
           zoneId="1098219"
+        />
+        <JucicyAds
+          divId="video-ad-8"
+          width="300"
+          height="250"
+          zoneId="1098360"
+        />
+        <AdsteraAd
+          divId="video-ad-7"
+          width="300"
+          height="250"
+          zoneId="8856fddb09b862b553c595fb21d7c31e"
         />
         {/* <script type="text/javascript">juicy_adzone = '1098207';</script>
         <script

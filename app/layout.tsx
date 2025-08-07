@@ -4,6 +4,8 @@ import "./globals.css";
 import Link from "next/link";
 import { JucicyAds } from "./components/JucicyAds";
 import { AdsteraAd } from "./components/AdsteraAd";
+// import { JucyAdPopUnder } from "./components/JucyAdPopUnder";
+// import { AdsteraAdPopUnder } from "./components/AdsteraAdPopUnder";
 // import { LocationLessAds } from "./components/LocationLessAds";
 // import AgeVerification from "./components/AgeVerification";
 
@@ -51,6 +53,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div id="pop-under-1"></div>
+        <div id="pop-under-2"></div>
         {/* <AgeVerification /> */}
         <header className="bg-midnight-blue text-cream-white p-4">
           <nav className="flex flex-col items-center justify-between">
@@ -481,10 +485,8 @@ export default function RootLayout({
             height="90"
             zoneId="7563824927835ebe1983954665c6829d"
           />
-          {/* <script
-            type="text/javascript"
-            src="https://js.juicyads.com/jp.php?c=4464w203s224u4r2o2f4z2b424&u=https%3A%2F%2Fwww.juicyads.rocks"
-          ></script> */}
+          {/* <JucyAdPopUnder divId="pop-under-1" /> */}
+          {/* <AdsteraAdPopUnder divId="pop-under-2" /> */}
         </footer>
       </body>
     </html>
