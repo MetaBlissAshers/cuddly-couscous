@@ -34,6 +34,7 @@ export function AdsteraAd({
     script2.type = "text/javascript";
     script2.src = `//www.highperformanceformat.com/${zoneId}/invoke.js`;
     document.getElementById(divId)?.appendChild(script2);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return null;

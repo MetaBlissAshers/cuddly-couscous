@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import { JucicyAds } from "./components/JucicyAds";
-import { AdsteraAd } from "./components/AdsteraAd";
-// import { LocationLessAds } from "./components/LocationLessAds";
-// import AgeVerification from "./components/AgeVerification";
+// import { JucicyAds } from "./components/JucicyAds";
+// import { AdsteraAd } from "./components/AdsteraAd";
+import { AdSpace } from "./components/AdSpace";
+import { HeaderAds } from "./components/HeaderAds";
+import AgeVerification from "./components/AgeVerification";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,27 +33,31 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script
-          async
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-E083W140K0"
-        ></script>
-        <script>
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
           {`  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-E083W140K0');
 `}
-        </script>
+        </Script>
         <meta
           name="juicyads-site-verification"
           content="d043e35c2f2e6956e39aa768836171c5"
         ></meta>
+        {/* Addstera pop under */}
+        <Script src="https://pl27366197.effectivegatecpm.com/d0/1c/86/d01c86a25c2c10dd60b4084a64908157.js" strategy="afterInteractive" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <AgeVerification /> */}
+        <div id="pop-under-1"></div>
+        <div id="pop-under-2"></div>
+        <AgeVerification />
         <header className="bg-midnight-blue text-cream-white p-4">
           <nav className="flex flex-col items-center justify-between">
             <Link href="/">
@@ -77,20 +83,11 @@ export default function RootLayout({
                   zIndex: 99998,
                 }}
               >
-                <iframe
-                  data-aa="2405767"
-                  src="//acceptable.a-ads.com/2405767/?size=Adaptive"
-                  style={{
-                    border: "0",
-                    padding: "0",
-                    width: "70%",
-                    height: "auto",
-                    overflow: "hidden",
-                  }}
-                ></iframe>
               </div>
             </div>
-            <div id="horizontal-ad-2"></div>
+            <AdSpace>
+              <HeaderAds />
+            </AdSpace>
             <div id="horizontal-ad-4"></div>
             {/* <iframe
               id="horizontal-ad-3"
@@ -139,6 +136,14 @@ export default function RootLayout({
                   Models
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/upload"
+                  className="hover:text-velvet-plum hover:underline"
+                >
+                  Upload
+                </Link>
+              </li>
             </ul>
           </nav>
         </header>
@@ -148,7 +153,7 @@ export default function RootLayout({
             <div className="mr-4 hidden lg:block">
               <div className="flex flex-col">
                 <div id="vertical-ad-1"></div>
-                <div id="vertical-ad-2"></div>
+                  <div id="vertical-ad-2"></div>
                 {/* <div
                   id="vertical-ad-2"
                   style={{ position: "absolute", zIndex: 99999 }}
@@ -259,8 +264,8 @@ export default function RootLayout({
             <div className="">{children}</div>
             <div className="ml-4 hidden sm:block">
               <div className="flex flex-col">
-                <div id="vertical-ad-3"></div>
-                <div id="vertical-ad-4"></div>
+                  <div id="vertical-ad-3"></div>
+                  <div id="vertical-ad-4"></div>
                 {/* <div
                   id="vertical-ad-1"
                   style={{ position: "absolute", zIndex: 99999 }}
@@ -370,6 +375,11 @@ export default function RootLayout({
             </div>
           </div>
         </main>
+            <AdSpace>
+
+                <Script data-cfasync="false" src="https://pl28610553.effectivegatecpm.com/e8b486dc6e0c7a0ab8014f9a4c62d718/invoke.js" strategy="afterInteractive" />
+<div id="container-e8b486dc6e0c7a0ab8014f9a4c62d718"></div>
+            </AdSpace>
         <footer className="bg-midnight-blue text-cream-white p-4 text-center">
           {/* <iframe
             className="hidden justify-self-center lg:block"
@@ -438,8 +448,34 @@ export default function RootLayout({
           </div> */}
           <div className="justify-self-center" id="horizontal-ad-1"></div>©
           2023 Free HQ Porn XXX
+          <div className="flex flex-wrap justify-center gap-4 mt-4 text-sm">
+            <Link href="/ratings" className="hover:text-velvet-plum hover:underline">
+              Ratings
+            </Link>
+            <Link href="/tos" className="hover:text-velvet-plum hover:underline">
+              Terms of Service
+            </Link>
+            <Link href="/privacy" className="hover:text-velvet-plum hover:underline">
+              Privacy Policy
+            </Link>
+            <Link href="/copyright" className="hover:text-velvet-plum hover:underline">
+              Copyright
+            </Link>
+            <Link href="/2257" className="hover:text-velvet-plum hover:underline">
+              2257
+            </Link>
+            <Link href="/disclaimer" className="hover:text-velvet-plum hover:underline">
+              Disclaimer
+            </Link>
+            <Link href="/faq" className="hover:text-velvet-plum hover:underline">
+              FAQ
+            </Link>
+            <Link href="/about" className="hover:text-velvet-plum hover:underline">
+              About
+            </Link>
+          </div>
           {/* <LocationLessAds /> */}
-          <JucicyAds
+          {/* <JucicyAds
             divId="horizontal-ad-2"
             width="728"
             height="90"
@@ -474,18 +510,29 @@ export default function RootLayout({
             width="160"
             height="600"
             zoneId="1098213"
-          />
-          <AdsteraAd
+          /> */}
+          {/* <AdsteraAd
             divId="horizontal-ad-4"
             width="728"
             height="90"
             zoneId="7563824927835ebe1983954665c6829d"
           />
-          {/* <script
-            type="text/javascript"
-            src="https://js.juicyads.com/jp.php?c=4464w203s224u4r2o2f4z2b424&u=https%3A%2F%2Fwww.juicyads.rocks"
-          ></script> */}
+        <AdsteraAd
+          divId="vertical-ad-1"
+          width="160"
+          height="600"
+          zoneId="f04bb2e997886aaa57ec945bd79f14e3"
+        />
+        <AdsteraAd
+          divId="vertical-ad-3"
+          width="160"
+          height="600"
+          zoneId="f04bb2e997886aaa57ec945bd79f14e3"
+        /> */}
+          {/* <JucyAdPopUnder divId="pop-under-1" /> */}
+          {/* <AdsteraAdPopUnder divId="pop-under-2" /> */}
         </footer>
+        <Script src="https://pl28610527.effectivegatecpm.com/94/43/d3/9443d32b5e2e0851cec0751ae7ac83c5.js" strategy="afterInteractive" />
       </body>
     </html>
   );

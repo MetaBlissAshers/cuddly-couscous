@@ -2,27 +2,17 @@
 
 import { useEffect } from "react";
 
-export function JucicyAds2({
-  divId,
-  zoneId,
-}: {
-  divId: string;
-  zoneId: string;
-}) {
+export function AdsteraAdPopUnder({ divId }: { divId: string }) {
   useEffect(() => {
-    console.log("JucicyAds2", divId, zoneId);
+    console.log("AdsteraAdPopUnder", divId);
     if (document.getElementById(divId) == null) {
       console.log("divId not found", divId);
       return;
     }
     const script1 = document.createElement("script");
-    script1.setAttribute("data-id", "juicyads-native-ads");
-    script1.setAttribute("data-ad-zone", `${zoneId}`);
-    script1.setAttribute("data-targets", "a");
-
     script1.type = "text/javascript";
-    script1.src = "https://js.juicyads.com/juicyads.native-ads.min.js";
-
+    script1.src =
+      "//pl27366197.profitableratecpm.com/d0/1c/86/d01c86a25c2c10dd60b4084a64908157.js";
     document.getElementById(divId)?.appendChild(script1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

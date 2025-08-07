@@ -11,26 +11,54 @@ export type Video = {
   tags: string;
   thumbnail_url: string;
   extra_thumbnails: string;
+  cdn_thumbnail_url: string | null;
+  cdn_extra_thumbnails: string | null;
   iframe_src: string;
   scraped_at: string;
 };
 
+function processVideo(video: Video): Video {
+  return {
+    ...video,
+    thumbnail_url: video.cdn_thumbnail_url || video.thumbnail_url,
+    extra_thumbnails: video.cdn_extra_thumbnails || video.extra_thumbnails,
+  };
+}
+
+
 export type Category = {
   category_name: string;
   category_thumbnail_url: string;
+  cdn_category_thumbnail_url: string | null;
 };
 
 export type Model = {
   model_name: string;
   model_thumbnail_url: string;
+  cdn_model_thumbnail_url: string | null;
 };
+
+function processCategory(category: Category): Category {
+  return {
+    ...category,
+    category_thumbnail_url: category.cdn_category_thumbnail_url || category.category_thumbnail_url,
+  };
+}
+
+function processModel(model: Model): Model {
+  return {
+    ...model,
+    model_thumbnail_url: model.cdn_model_thumbnail_url || model.model_thumbnail_url,
+  };
+}
+
 
 let db: sqlite3.Database | null = null;
 
 export async function getDb(): Promise<sqlite3.Database> {
   if (db) return db;
   return new Promise((resolve, reject) => {
-    const newDb = new sqlite3.Database('./db.sqlite', (err) => {
+    const newDb = new sqlite3.Database('./video_links.db', (err) => {
       if (err) reject(err);
       else resolve(newDb);
     });
@@ -47,7 +75,7 @@ export async function getVideos(page: number = 1, pageSize: number = 10): Promis
       [pageSize, offset],
       (err, rows) => {
         if (err) reject(err);
-        else resolve(rows);
+        else resolve(rows.map(processVideo));
       }
     );
   });
@@ -96,7 +124,7 @@ export async function getVideoById(id: string): Promise<Video | null> {
   return new Promise((resolve, reject) => {
     d.get<Video>(`SELECT * FROM video_links WHERE id = ?`, [id], (err, row) => {
       if (err) reject(err);
-      else resolve(row || null);
+      else resolve(row ? processVideo(row) : null);
     });
   });
 }
@@ -114,9 +142,9 @@ export async function getAllVideoIds(): Promise<string[]> {
 export async function getAllCategories(): Promise<Category[]> {
   const d = await getDb();
   return new Promise((resolve, reject) => {
-    d.all<Category>(`SELECT category_name, category_thumbnail_url FROM categories`, (err, rows) => {
+    d.all<Category>(`SELECT category_name, category_thumbnail_url, cdn_category_thumbnail_url FROM categories`, (err, rows) => {
       if (err) reject(err);
-      else resolve(rows);
+      else resolve(rows.map(processCategory));
     });
   });
 }
@@ -124,9 +152,9 @@ export async function getAllCategories(): Promise<Category[]> {
 export async function getAllModelDetails(): Promise<Model[]> {
   const d = await getDb();
   return new Promise((resolve, reject) => {
-    d.all<Model>(`SELECT model_name, model_thumbnail_url FROM models`, (err, rows) => {
+    d.all<Model>(`SELECT model_name, model_thumbnail_url, cdn_model_thumbnail_url FROM models`, (err, rows) => {
       if (err) reject(err);
-      else resolve(rows);
+      else resolve(rows.map(processModel));
     });
   });
 } 
